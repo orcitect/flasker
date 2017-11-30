@@ -1,0 +1,3 @@
+pymysql
+unicodecsv
+pandas
