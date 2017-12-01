@@ -144,7 +144,7 @@ def data_to_html():
         return jsonify({'error': 'data source inaccessible'})
     columns = ['casinoid', 'status', 'site', 'jurisdiction', 'mobile', 'seamlesswallet', 'prodnodes', 'prodver', 'prodgee', 'proddbserver', 'proddbname', 'testnodes', 'testver', 'testgee', 'testdbserver', 'testdbname']
     dataframe = data.filter(items=columns)
-    return render_template("dataframe.html", data=dataframe.to_html(index=False).replace('<table border="1" class="dataframe">', '<table class="table table-hover table-dark">'))
+    return render_template("dataframe.html", data=dataframe.to_html(index=True).replace('<table border="1" class="dataframe">', '<table class="table table-hover" style="font-size:13px;">'))
 
 
 @app.route('/api/casinoid/<casinoid>/status')
