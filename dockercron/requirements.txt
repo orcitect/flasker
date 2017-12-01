@@ -1,3 +1,4 @@
-pymysql
-unicodecsv
 pandas
+flask
+gunicorn
+SQLAlchemy
